@@ -12,7 +12,7 @@ class MyGame < Gosu::Window
 		@player1= Player.new(self)
 		@bonus50 = Bonus50.new(self)
 		@bonusminus50 = Bonusminus50.new(self)
-		@bonusminus50_a = Bonusminus50.new(self)
+		@bonusminus50_a = Bonusminus50.new(self,3)
 		# @balls = 3.times.map {Ball.new(self)}
 		@balls = []
 		@balls << SpikeBall.new(self)
@@ -50,6 +50,8 @@ class MyGame < Gosu::Window
       @bonus50.update
       
       @bonusminus50.update
+      
+      @bonusminus50_a.update
       
       @balls.each {|ball| ball.update}
       

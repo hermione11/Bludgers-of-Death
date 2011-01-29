@@ -1,7 +1,8 @@
 class Bonusminus50
-  def initialize(game_window)
+  def initialize(game_window, speed=1)
     @game_window = game_window
     @icon = Gosu::Image.new(@game_window, "images/dementor.png", true)
+    @speed=speed
     reset!
   end
   
@@ -9,7 +10,7 @@ class Bonusminus50
     if @y > @game_window.height
       reset!
     else
-      @y = @y + 1
+      @y = @y + @speed
     end
   end
   
