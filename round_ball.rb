@@ -1,7 +1,7 @@
 class RoundBall
   def initialize(game_window)
     @game_window = game_window
-    @icon = Gosu::Image.new(@game_window, "images/ball.png", true)
+    @icon = Gosu::Image.new(@game_window, "images/roundballbludger_icon.png", true)
     reset!
   end
   
@@ -13,7 +13,7 @@ class RoundBall
     if @y > @game_window.height
       reset!
     else
-      @y = @y + 12
+      @y = @y + 7
     end
   end
   

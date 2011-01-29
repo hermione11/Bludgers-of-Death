@@ -1,7 +1,7 @@
 class SpikeBall
   def initialize(game_window)
     @game_window = game_window
-    @icon = Gosu::Image.new(@game_window, "images/spike_ball.png", true)
+    @icon = Gosu::Image.new(@game_window, "images/quaffle.png", true)
     reset!
   end
   
@@ -13,7 +13,7 @@ class SpikeBall
     if @y > @game_window.height
       reset!
     else
-      @y = @y + 10
+      @y = @y + 5
     end
   end
   

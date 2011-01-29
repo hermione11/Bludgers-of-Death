@@ -1,7 +1,7 @@
 class Ball
   def initialize(game_window)
     @game_window = game_window
-    @icon = Gosu::Image.new(@game_window, "images/ball.png", true)
+    @icon = Gosu::Image.new(@game_window, "images/roundballbludger_icon.png", true)
     reset!
   end
   

@@ -1,7 +1,7 @@
-class Bonus50
+class Bonusminus50
   def initialize(game_window)
     @game_window = game_window
-    @icon = Gosu::Image.new(@game_window, "images/goldensnitch.png", true)
+    @icon = Gosu::Image.new(@game_window, "images/dementor.png", true)
     reset!
   end
   
@@ -9,7 +9,7 @@ class Bonus50
     if @y > @game_window.height
       reset!
     else
-      @y = @y + 12
+      @y = @y + 1
     end
   end
   
