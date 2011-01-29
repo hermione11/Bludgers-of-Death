@@ -25,6 +25,7 @@ class MyGame < Gosu::Window
 		@message_font = Gosu::Font.new(self, Gosu::default_font_name, 20)
 		@background = Gosu::Image.new(self, "images/quiditch_field.png", true)
 		@score = 0
+		@highscore = 0
 	end
 	
 	def update
@@ -75,6 +76,9 @@ class MyGame < Gosu::Window
     
     else
       if button_down? Gosu::Button::KbEscape
+        if @highscore <= @score
+          @highscore = @score
+        end
         @score = 0
         @counter = 0
         restart_game
@@ -99,6 +103,7 @@ class MyGame < Gosu::Window
     @bonusminus50_a.draw
     @message_font.draw("You have #{@lives - @counter + 1} lives remaining",2,475,5)
     @message_font.draw("Your score is: #{@score}",25,25,5)
+    @message_font.draw("Highscore: #{@highscore}",25,50,5)
     @player1.draw
     @balls.each {|ball| ball.draw}
   end
